@@ -1,0 +1,88 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+        <div class="container">
+          <h2>Featured</h2>
+        </div>
+
+        <section>
+          <div class="container">
+
+            <div class="movie">
+              <h1>{{movie.Title}} ({{movie.Year}})</h1>
+              <div class="row">
+                <div class="col-md-4">
+
+                  <img src="{{movie.Poster}}" alt="">
+
+                </div>
+                <div class="col-md-8">
+
+                  <dl>
+                    <dt>Released</dt>
+                    <dd>{{movie.Released}}</dd>
+
+                    <dt>Director</dt>
+                    <dd>{{movie.Director}}</dd>
+
+                    <dt>Writers</dt>
+                    <dd>{{movie.Writer}}</dd>
+
+                    <dt>Awards</dt>
+                    <dd>{{movie.Awards}}</dd>
+
+                    <dt>Plot</dt>
+                    <dd>{{movie.Plot}}</dd>
+                  </dl>
+
+                </div>
+              </div>
+            </div><!-- /movie -->
+
+          </div>
+        </section>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- <button (click)="getMovies()" type="button" name="button">Get Movie</button>
+
+<div *ngFor="let movie of movies | async">
+ {{ movie | json }}
+</div> -->
+
+<!-- <input [formControl]="search">
+
+<div *ngFor="let movie of movies | async">
+
+<h1>{{movie.title}}</h1> -->
+
+<!-- <h1>{{ title }}</h1>
+
+<button (click)='getData()'>Fetch Data</button>
+
+<table>
+  <tr>
+    <th>Title</th>
+  </tr>
+  <tr *ngFor='let movie of data$ | async'>
+    <td>{{ movie.title }}</td>
+    <td>{{ movie.year }}</td>
+  </tr>
+</table> -->
+
+<!-- <div>
+      <h2>Question : </h2>
+      <div *ngIf="MyMovies && MyMovies.length">
+      <div *ngFor="let movie of MyMovies; let idx = index"><br/>
+        <div>{{movie}}</div>
+        <input type="radio" name="radioGroup{{idx}}"/>{{idx}}
+      </div>
+      </div>
+    </div> -->
