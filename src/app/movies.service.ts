@@ -1,17 +1,23 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http'
+import { HttpClient, HttpParams } from '@angular/common/http'
 import { Observable } from 'rxjs/Observable';
-import { IMovie } from './movie';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/do';
 
 @Injectable()
 export class MoviesService {
 
-  private _url: string = "http://www.omdbapi.com/?apikey=ee5c3346&t=guardians%20of%20the%20galaxy";
+  //private url: string = "http://www.omdbapi.com/?apikey=ee5c3346&t=" + this.sq;
+  private url: string = "http://www.omdbapi.com/";
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    //console.log('Hello moviesService provider');
+  }
 
-  getMovies() {
-    return this.http.get(this._url);
+  getMovies(themovie) {
+    let params = new HttpParams().set('t', themovie);
+    //returns Observable
+    return this.http.get(this.url + '?apikey=ee5c3346', {params})
   }
 
 }

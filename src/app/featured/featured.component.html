@@ -11,30 +11,61 @@
           <div class="container">
 
             <div class="movie">
-              <h1>{{movie.Title}} ({{movie.Year}})</h1>
+              <h1>{{ movie.Title }} ({{ movie.Year }})</h1>
               <div class="row">
                 <div class="col-md-4">
 
-                  <img src="{{movie.Poster}}" alt="">
+                  <img src="{{ movie.Poster }}" alt="">
 
                 </div>
                 <div class="col-md-8">
 
                   <dl>
                     <dt>Released</dt>
-                    <dd>{{movie.Released}}</dd>
+                    <dd>{{ movie.Released }}</dd>
 
                     <dt>Director</dt>
-                    <dd>{{movie.Director}}</dd>
+                    <dd>{{ movie.Director }}</dd>
 
                     <dt>Writers</dt>
-                    <dd>{{movie.Writer}}</dd>
+                    <dd>{{ movie.Writer }}</dd>
 
                     <dt>Awards</dt>
-                    <dd>{{movie.Awards}}</dd>
+                    <dd>{{ movie.Awards }}</dd>
 
                     <dt>Plot</dt>
-                    <dd>{{movie.Plot}}</dd>
+                    <dd>{{ movie.Plot }}</dd>
+                  </dl>
+
+                </div>
+              </div>
+            </div><!-- /movie -->
+
+            <div class="movie">
+              <h1>{{ movie2.Title }} ({{ movie.Year }})</h1>
+              <div class="row">
+                <div class="col-md-4">
+
+                  <img src="{{ movie2.Poster }}" alt="">
+
+                </div>
+                <div class="col-md-8">
+
+                  <dl>
+                    <dt>Released</dt>
+                    <dd>{{ movie2.Released }}</dd>
+
+                    <dt>Director</dt>
+                    <dd>{{ movie2.Director }}</dd>
+
+                    <dt>Writers</dt>
+                    <dd>{{ movie2.Writer }}</dd>
+
+                    <dt>Awards</dt>
+                    <dd>{{ movie2.Awards }}</dd>
+
+                    <dt>Plot</dt>
+                    <dd>{{ movie2.Plot }}</dd>
                   </dl>
 
                 </div>
