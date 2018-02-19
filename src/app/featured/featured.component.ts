@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MoviesService } from './../movies.service';
 import { IMovie } from './../movie';
-import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-featured', //<app-featured>
@@ -12,16 +11,19 @@ import { Observable } from 'rxjs/Observable';
 
 export class FeaturedComponent implements OnInit {
 
-    movie: Observable<IMovie[]>;
-    movie2: Observable<IMovie[]>;
+    presetMovie_01: string = "Guardians of the Galaxy";
+    presetMovie_02: string = "Source Code";
+
+    movie: any;
+    movie2: any;
 
     constructor(private moviesService : MoviesService){}
 
     //Observable object to IMovie array
-    ngOnInit(): Observable<IMovie[]> {
-      this.movie = this.moviesService.getMovies("bridge of spies")
+    ngOnInit() {
+      this.movie = this.moviesService.getFeaturedMovie(this.presetMovie_01)
       .subscribe(data => this.movie = data);
-      this.movie2 = this.moviesService.getMovies("Avatar")
+      this.movie2 = this.moviesService.getFeaturedMovie(this.presetMovie_02)
       .subscribe(data => this.movie2 = data);
       //.subscribe(data => console.log(data));
     }

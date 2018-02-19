@@ -24,7 +24,6 @@ import { SearchComponent } from './search/search.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    //HttpModule,
     FormsModule
   ],
   providers: [
