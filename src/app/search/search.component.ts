@@ -33,8 +33,10 @@ export class SearchComponent implements OnInit {
   searchMovie() {
     this.movie = this.moviesService.searchMovie(this.searchQuery, this.plotLength)
     .subscribe(data => this.movie = data);
+
+
+
     this.visible = true;
-    console.log(this.visible);
   }
 
 }

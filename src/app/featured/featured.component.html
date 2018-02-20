@@ -1,101 +1,77 @@
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
+<main>
+  <div class="container">
+    <div class="row pt-5">
 
-        <div class="container">
-          <h2>Featured</h2>
-        </div>
+      <section class="text-center pb-3">
+          <h1 class="font-bold h1 py-5">Featured movies</h1>
+          <p class="section-description">Great movies! Technically flawless! Movies that add or teach content of cultural, philosophical or moral values.</p>
 
-        <section>
-          <div class="container">
+          <!--Grid row-->
+          <div class="row justify-content-center">
 
-            <div class="movie">
-              <h1>{{ movie.Title }} ({{ movie.Year }})</h1>
-              <div class="row">
-                <div class="col-md-4">
+              <!--Grid column-->
+              <div class="col-3 mb-r">
+                  <div class="card card-cascade narrower">
 
-                  <img src="{{ movie.Poster }}" alt="">
+                      <div class="view overlay hm-white-slight">
+                          <img src="{{ movie.Poster }}" class="img-fluid" alt="">
+                          <a>
+                              <div class="mask"></div>
+                          </a>
+                      </div>
 
-                </div>
-                <div class="col-md-8">
+                      <div class="card-body text-center">
+                          <!--Category & Title-->
+                          <a href="" class="grey-text">
+                              <h5>{{ movie.Year }}</h5>
+                          </a>
+                          <h4 class="card-title">
+                              <strong><a href="">{{ movie.Title }}</a></strong>
+                          </h4>
 
-                  <dl>
-                    <dt>Awards</dt>
-                    <dd>{{ movie.Awards }}</dd>
+                          <p class="card-text">{{ movie.Plot }}</p>
+                          <div class="card-footer">{{ movie.Awards }}</div>
 
-                    <dt>Plot</dt>
-                    <dd>{{ movie.Plot }}</dd>
-                  </dl>
+                      </div>
 
-                </div>
+                  </div>
               </div>
-            </div><!-- /movie -->
+              <!--Grid column-->
 
-            <div class="movie">
-              <h1>{{ movie2.Title }} ({{ movie.Year }})</h1>
-              <div class="row">
-                <div class="col-md-4">
+              <!--Grid column-->
+              <div class="col-3 mb-r">
+                  <div class="card card-cascade narrower">
 
-                  <img src="{{ movie2.Poster }}" alt="">
+                      <div class="view overlay hm-white-slight">
+                          <img src="{{ movie2.Poster }}" class="img-fluid" alt="">
+                          <a>
+                              <div class="mask"></div>
+                          </a>
+                      </div>
 
-                </div>
-                <div class="col-md-8">
+                      <div class="card-body text-center">
+                          <!--Category & Title-->
+                          <a href="" class="grey-text">
+                              <h5>{{ movie2.Year }}</h5>
+                          </a>
+                          <h4 class="card-title">
+                              <strong><a href="">{{ movie2.Title }}</a></strong>
+                          </h4>
 
-                  <dl>
-                    <dt>Awards</dt>
-                    <dd>{{ movie2.Awards }}</dd>
+                          <p class="card-text">{{ movie2.Plot }}</p>
+                          <div class="card-footer">{{ movie2.Awards }}</div>
 
-                    <dt>Plot</dt>
-                    <dd>{{ movie2.Plot }}</dd>
-                  </dl>
+                      </div>
 
-                </div>
+                  </div>
               </div>
-            </div><!-- /movie -->
+              <!--Grid column-->
 
           </div>
-        </section>
+          <!--Grid row-->
+      </section>
 
     </div>
   </div>
-</div>
-
-
-
-
-<!-- <button (click)="getMovies()" type="button" name="button">Get Movie</button>
-
-<div *ngFor="let movie of movies | async">
- {{ movie | json }}
-</div> -->
-
-<!-- <input [formControl]="search">
-
-<div *ngFor="let movie of movies | async">
-
-<h1>{{movie.title}}</h1> -->
-
-<!-- <h1>{{ title }}</h1>
-
-<button (click)='getData()'>Fetch Data</button>
-
-<table>
-  <tr>
-    <th>Title</th>
-  </tr>
-  <tr *ngFor='let movie of data$ | async'>
-    <td>{{ movie.title }}</td>
-    <td>{{ movie.year }}</td>
-  </tr>
-</table> -->
-
-<!-- <div>
-      <h2>Question : </h2>
-      <div *ngIf="MyMovies && MyMovies.length">
-      <div *ngFor="let movie of MyMovies; let idx = index"><br/>
-        <div>{{movie}}</div>
-        <input type="radio" name="radioGroup{{idx}}"/>{{idx}}
-      </div>
-      </div>
-    </div> -->
+</main>

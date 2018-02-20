@@ -1,10 +1,11 @@
 <div class="container">
-  <div class="row">
+  <div class="row pt-5">
     <div class="col-lg-12">
 
-      <div class="container">
-        <h2>Featured</h2>
-      </div>
+      <section class="text-center pb-3">
+        <h1 class="font-bold h1 py-5">Search for a movie</h1>
+      </section>
+
 
       <section>
         <div class="container">
@@ -15,7 +16,7 @@
                 <form class="well form-search" id="search-by-title-form" onsubmit="return false;">
                   <div>
                       <label class="control-label" for="t">Title:</label>
-                      <input type="text" id="search-title" name="search-title" class="input-large" [(ngModel)]="searchQuery">
+                      <input type="text" id="search-title" name="search-title" class="input" [(ngModel)]="searchQuery">
                       &nbsp;&nbsp;
                       <label class="control-label">Plot:</label>
                       <select (change)="selectChangeHandler($event)" name="plot" style="width: 100px;">
@@ -23,14 +24,14 @@
                           <option value="full">Full</option>
                       </select>
                       &nbsp;&nbsp;
-                      <input type="submit" class="btn" [value]="btnText" (click)="searchMovie()">
+                      <input type="submit" class="btn btn-primary" [value]="btnText" (click)="searchMovie()">
                   </div>
                 </form>
               </div>
 
               <div *ngIf="visible">
-                <div class="movie-search-result">
-                  <h1>{{ movie.Title }} ({{ movie.Year }})</h1>
+                <div class="movie-search-result pt-3">
+                  <h2>{{ movie.Title }} ({{ movie.Year }})</h2>
                   <div class="row">
                     <div class="col-md-4">
 
@@ -40,11 +41,39 @@
                     <div class="col-md-8">
 
                       <dl>
+                        <dt>Released</dt>
+                        <dd>{{ movie.Released }}</dd>
+
+                        <dt>Runtime</dt>
+                        <dd>{{ movie.Runtime }}</dd>
+
+                        <dt>Genre</dt>
+                        <dd>{{ movie.Genre }}</dd>
+
+                        <dt>Director</dt>
+                        <dd>{{ movie.Director }}</dd>
+
+                        <dt>Writer</dt>
+                        <dd>{{ movie.Writer }}</dd>
+
+                        <dt>Language</dt>
+                        <dd>{{ movie.Language }}</dd>
+
                         <dt>Awards</dt>
                         <dd>{{ movie.Awards }}</dd>
 
+                        <dt>Ratings</dt>
+                          <ul *ngFor="let rating of movie.Ratings">
+                            <li>{{ rating.Source }} - {{ rating.Value }}</li>
+                          </ul>
+
+                        <dt>IMDB Votes</dt>
+                        <dd>{{ movie.imdbVotes }}</dd>
+
                         <dt>Plot</dt>
                         <dd>{{ movie.Plot }}</dd>
+
+
                       </dl>
 
                     </div>
