@@ -12,7 +12,7 @@ import { IMovie } from './../movie';
 export class FeaturedComponent implements OnInit {
 
     presetMovie_01: string = "Guardians of the Galaxy";
-    presetMovie_02: string = "Source Code";
+    presetMovie_02: string = "Inception";
 
     movie: any;
     movie2: any;

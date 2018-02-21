@@ -9,3 +9,15 @@ h1 {
 h2 {
   font-size: 3em;
 }
+
+.movie-result {
+  .movie-plot {
+    display: inline;
+  }
+  .readmore {
+    display: inline;
+    color: #007bff;
+    cursor: pointer;
+  }
+
+}
